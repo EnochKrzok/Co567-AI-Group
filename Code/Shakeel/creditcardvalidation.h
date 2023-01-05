@@ -80,7 +80,8 @@ public:bool isValid(std::int64_t number)
 
 void is_valid_Run()
 {
-
+// If the credit card number is valid, check the expiration month
+    // If the credit card number is not valid, prompt the user to enter a new number
     // tested on card number 5196081888500645
  std::int64_t cardnumber;
 std::cout << "Please enter credit card number." << std::endl;
@@ -102,6 +103,9 @@ std::cout << "Please enter credit card number." << std::endl;
 
 void check_Month()
 {
+  // Prompts the user to enter the expiration month of the credit card
+    // If the month is between 1 and 12 (inclusive), check the expiration year
+    // If the month is not between 1 and 12, prompt the user to enter a new month
     // checking month between 1 and 12
     std::cout << "Please enter expiry date month." << std::endl;
     int month = 0;
@@ -118,6 +122,9 @@ void check_Month()
 
 void check_Year()
 {
+  // Prompts the user to enter the expiration year of the credit card
+    // If the year is between 23 and 27 (inclusive), check the CVV
+    // If the year is not between 23 and 27, prompt the user to enter a new year
     // usialy credit card have 4 to 5 years of expiry
     std::cout << "Please enter expiry date year like 23,24,25 and 26." << std::endl;
     int year = 0;
@@ -135,6 +142,9 @@ void check_Year()
 
 void check_CVV()
 {
+  // Prompts the user to enter the CVV of the credit card
+    // If the CVV is between 100 and 999 (inclusive), accept the credit card
+    // If the CVV is not between 100 and 999, prompt the user to enter a new CVV
     // usialy credit card have length 3 cvv number
     std::cout << "Please enter 3 digit CVV usualy on card back side." << std::endl;
     int cvv = 0;
