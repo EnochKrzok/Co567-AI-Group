@@ -1,3 +1,0 @@
-C:/Users/ejink/CLionProjects/OnlineTicketSystem/cmake-build-debug/CMakeFiles/OnlineTicketSystem.dir
-C:/Users/ejink/CLionProjects/OnlineTicketSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ejink/CLionProjects/OnlineTicketSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir

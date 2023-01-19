@@ -1,4 +1,4 @@
-// customer.h
+// venueManger.h
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -6,10 +6,10 @@
 
 #include "user.h"
 
-class customer : public user {
+class venueManger : public user {
 public:
-    customer();
-    ~customer();
+    venueManger();
+    ~venueManger();
     void getLogin();
     void getProfileInfo(string &fName, string &sName, string &address);
     void getPaymentInfo();
@@ -20,7 +20,7 @@ protected:
 };
 
 // constructor
-customer :: customer()
+venueManger :: venueManger()
 {
     fName = "";
     sName = "";
@@ -28,7 +28,6 @@ customer :: customer()
 }
 
 // destructor
-customer :: ~customer()
+venueManger :: ~venueManger()
 {
 }
-
