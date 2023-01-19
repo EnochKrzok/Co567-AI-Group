@@ -7,12 +7,11 @@
 
 #include "user.h"
 
-class customer : public user, protected user{
+class customer : public user{
 public:
     customer();
     ~customer();
     void getPaymentInfo();
-
 };
 
 // constructor
@@ -28,5 +27,3 @@ customer :: ~customer()
 {
 }
 
-// customer enters profile information
-void customer :: getProfileInfo(string &fName, string &sName, string &address) {}

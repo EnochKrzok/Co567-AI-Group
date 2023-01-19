@@ -7,7 +7,7 @@
 
 #include "user.h"
 
-class venueManger : public user, protected user {
+class venueManger : public user {
 public:
     venueManger();
     ~venueManger();

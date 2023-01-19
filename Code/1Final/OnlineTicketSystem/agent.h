@@ -7,7 +7,7 @@
 
 #include "user.h"
 
-class agent : public user, protected user {
+class agent : public user {
 public:
     agent();
     ~agent();

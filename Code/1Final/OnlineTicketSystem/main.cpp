@@ -5,6 +5,8 @@
 #include "show.h"
 #include "customer.h"
 #include "showSeat.h"
+#include "agent.h"
+#include "venueManger.h"
 
 using namespace std;
 
@@ -24,6 +26,8 @@ int main () {
     // Objects
     showSeat SEAT;
     customer CUST;
+    venueManger VENU;
+    agent AGEN;
     show SHOW;
     ticket *TICK;
 

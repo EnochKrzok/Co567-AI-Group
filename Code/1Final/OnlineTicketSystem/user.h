@@ -11,11 +11,12 @@ public:
     user();
     ~user();
     void getLogin();
-    void getProfileInfo(string &fName, string &sName, string &address);
+    void getProfileInfo(string &fName, string &sName, string &address, string &consumer);
 protected:
     string fName;
     string sName;
     string address;
+    string consumer;
 };
 
 // constructor
@@ -23,7 +24,8 @@ user :: user()
 {
     fName = "";
     sName = "";
-    address = ""; // initialises variables
+    address = "";
+    consumer = "";// initialises variables
 }
 
 // destructor
@@ -57,5 +59,6 @@ void user :: getLogin()
     }
 }
 
-
+// customer enters profile information
+void customer :: getProfileInfo(string &fName, string &sName, string &address, string &consumer) {}
 
