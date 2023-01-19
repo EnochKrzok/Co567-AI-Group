@@ -57,6 +57,5 @@ void user :: getLogin()
     }
 }
 
-// customer enters profile information
-void customer :: getProfileInfo(string &fName, string &sName, string &address) {}
+
 

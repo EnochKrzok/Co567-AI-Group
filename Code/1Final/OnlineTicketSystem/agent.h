@@ -1,4 +1,5 @@
 // agent.h
+//child of user
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -6,17 +7,12 @@
 
 #include "user.h"
 
-class agent : public user {
+class agent : public user, protected user {
 public:
     agent();
     ~agent();
-    void getLogin();
-    void getProfileInfo(string &fName, string &sName, string &address);
-    void getPaymentInfo();
-protected:
-    string fName;
-    string sName;
-    string address;
+
+
 };
 
 // constructor

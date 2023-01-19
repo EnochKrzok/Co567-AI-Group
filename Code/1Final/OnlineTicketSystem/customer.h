@@ -1,4 +1,5 @@
 // customer.h
+//child of user
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -6,17 +7,12 @@
 
 #include "user.h"
 
-class customer : public user {
+class customer : public user, protected user{
 public:
     customer();
     ~customer();
-    void getLogin();
-    void getProfileInfo(string &fName, string &sName, string &address);
     void getPaymentInfo();
-protected:
-    string fName;
-    string sName;
-    string address;
+
 };
 
 // constructor
@@ -32,3 +28,5 @@ customer :: ~customer()
 {
 }
 
+// customer enters profile information
+void customer :: getProfileInfo(string &fName, string &sName, string &address) {}
