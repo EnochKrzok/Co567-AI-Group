@@ -10,7 +10,7 @@ class ticket
 public:
     ticket();
     ~ticket();
-    void setPrice(double price);
+    void discountPrice(double price);
     void printTicket(string showName, string showDate, string showTime, int numSeats, string fName, string sName, string address);
     virtual double cost() = 0; // virtual function used by derived classes
 protected:
@@ -29,13 +29,13 @@ ticket :: ~ticket()
 }
 
 // calculates discount cost from total price
-void ticket :: setPrice(double price) {
+void ticket :: discountPrice(double price) {
     totalCost = price;
     cout << "\nThe total price of your tickets (including any applicable discount) is" << (char)156 << this -> cost() << ".\n" << endl;
     system("PAUSE");
 }
 
-    // prints ticket using data from derived classes
+// prints ticket using data from derived classes
 void ticket :: printTicket(string showName, string showDate, string showTime, int numSeats, string fName, string sName, string address)
 {
     system("CLS");

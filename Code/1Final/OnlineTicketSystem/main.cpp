@@ -25,17 +25,28 @@ int main () {
 
     // Objects
     showSeat SEAT;
-    customer CUST;
-    venueManger VENU;
-    agent AGEN;
+    user USER;
     show SHOW;
     ticket *TICK;
 
-    // Deals with getting customer's information
-    CUST.getLogin();
-    CUST.getProfileInfo(f, g, h);
+    USER.getProfileInfo(f, g, h);
 
+    switch (USER.getLogin()){
+        case 'a' : agent();
+            break;
+        case 'v' : venueManager();
+            break;
+        case 'c' : customer();
+            break;
+    }
+
+
+
+}
+
+void customer(){
     // Displays Main Menu, and allows customer to choose option
+    USER.getProfileInfo(f, g, h);
     system("CLS");
     cout << "~~~~~~~~~~~~~~~~~ MAIN MENU ~~~~~~~~~~~~~~~~~~" << endl;
     cout << "1. Buy tickets for upcoming shows" << endl;
@@ -65,8 +76,8 @@ int main () {
     // Deals with selecting seat and calculating price of seats
     SEAT.initialiseFloorPlan();
     d = SEAT.getNumSeats();
-   // e = SEAT.getSeatSelection();
+    // e = SEAT.getSeatSelection();
 
     // Deals with discounts, payment and ticket generation
     return 0;
-}
+};

@@ -3,4 +3,4 @@ project(OnlineTicketSystem)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(OnlineTicketSystem main.cpp cmake-build-debug/customer.h customer.h show.h showSeat.h ticket.h venueManger.h agent.h user.h)
+add_executable(OnlineTicketSystem main.cpp cmake-build-debug/customer.h show.h showSeat.h ticket.h user.h)

@@ -11,7 +11,11 @@ public:
     ~show();
     void selectShow();
     string selectTime();
-
+    void addDiscount();
+    void addShow();
+    void deleteShow();
+    void rescheduleShow();
+    void selectDateRange();
 protected:
     string showName;
     string showDate;
@@ -63,5 +67,5 @@ void show:: selectShow() {
     this->showDate = showDate; // enters reference variable into class variable
     cin.get(terminator); // clears buffer
 }
-// customer selects 1pm/7pm showing
-//string show::selectTime(){}
+//customer selects 1pm/7pm showing
+string show::selectTime(){}

@@ -1,5 +1,4 @@
 // user.h
-//this is the parent class of agent, venue manger and customer
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -10,13 +9,14 @@ class user {
 public:
     user();
     ~user();
-    void getLogin();
+    char getLogin();
     void getProfileInfo(string &fName, string &sName, string &address, string &consumer);
+    void getPaymentInfo();
 protected:
     string fName;
     string sName;
     string address;
-    string consumer;
+    char consumer;
 };
 
 // constructor
@@ -34,7 +34,7 @@ user :: ~user()
 }
 
 // user logs in
-void user :: getLogin()
+char user :: getLogin()
 {
     string username; // in the real system, a set of usernames/passwords would be saved in a database file
     string password; // in this prototype, any username/password will be accepted
@@ -57,8 +57,12 @@ void user :: getLogin()
         cout << "Please re-enter your password: ";
         getline(cin, password);
     }
+
+    cout<<"Enter agent(a)/venue manager(b)/customer(c) : ";
+    getline(cin, consumer);
+    return consumer
 }
 
-// customer enters profile information
-void customer :: getProfileInfo(string &fName, string &sName, string &address, string &consumer) {}
+// customer/agent enters profile information
+void user :: getProfileInfo(string &fName, string &sName, string &address, string &consumer) {}
 

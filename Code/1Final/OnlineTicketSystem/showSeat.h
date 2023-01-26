@@ -12,10 +12,12 @@ public:
     ~showSeat();
     void initialiseFloorPlan();
     int getNumSeats();
+    int setNumSeats();
     double getSeatSelection();
-private:
     void displayFloorPlan (int r, int c);
-    void calculatePrice (double &price); // encapsulation functions only accessed by this class, and no other part of the program
+    void calculatePrice (double &price);
+    void getRandomSeat();
+    void setPrice();
 protected:
     char floorPlan[7][6];
     int numSeats;
@@ -55,10 +57,54 @@ int showSeat :: getNumSeats()
     do {
         cin.clear();
         cin.ignore(100, '\n');
-        cout << "How many tickets would you like to purchase (Max. 8)?: "; // prompts customer to enter no. of tickets
+        cout << "How many tickets would you like to purchase (Max." << rNum <<  ")?: "; // prompts customer to enter no. of tickets
         cin >> numSeats;
         cout << endl;
     }
-    while (numSeats != 1 && numSeats != 2 && numSeats != 3 && numSeats != 4 && numSeats != 5 && numSeats != 6 && numSeats != 7 && numSeats != 8);
+    while (numSeats < 1 && numSeats > rNum );
         return numSeats;
 }
+
+//set the number of seats agent/customer can buy
+int showSeat :: setNumSeats()
+{
+    system("CLS");
+    cout << "\n~~~~~~~SELECT NUMBER OF SEATS~~~~~~~\n" << endl;
+
+    cin.clear();
+    cin.ignore(100, '\n');
+    cout << "How many tickets can agents and customers get? : "; // prompts customer to enter no. of tickets
+    cin >> rNum;
+    cout << endl;
+}
+
+//
+double showSeat :: getSeatSelection(){
+
+}
+
+//
+void showSeat:: displayFloorPlan(int r, int c){
+    for(int r = 0; r < 7; r++) // prepares rows
+    {
+        for (int c = 0; c < 6; c++) // prepares columns
+            cout << floorPlan << endl
+        cout << "\n" << endl
+    }
+}
+
+//
+void showSeat:: calculatePrice(double &price){
+
+}
+
+//
+void showSeat:: getRandomSeat(){
+
+}
+
+//
+void showSeat:: setPrice(){
+
+}
+
