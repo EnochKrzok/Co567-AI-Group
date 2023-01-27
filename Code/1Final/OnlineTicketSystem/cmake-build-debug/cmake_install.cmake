@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/ejink/CLionProjects/OnlineTicketSystem
+# Install script for directory: C:/Users/ejink/Documents/GitHub/Co567-AI-Group/Code/1Final/OnlineTicketSystem
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/ejink/CLionProjects/OnlineTicketSystem/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/ejink/Documents/GitHub/Co567-AI-Group/Code/1Final/OnlineTicketSystem/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

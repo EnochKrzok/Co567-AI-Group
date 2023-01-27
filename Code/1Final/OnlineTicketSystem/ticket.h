@@ -11,7 +11,7 @@ public:
     ticket();
     ~ticket();
     void discountPrice(double price);
-    void printTicket(string showName, string showDate, string showTime, int numSeats, string fName, string sName, string address);
+    void printTicket(string showName, string showDate, string showTime, int numSeats, string fName, string sName, string address, double total);
     virtual double cost() = 0; // virtual function used by derived classes
 protected:
     double totalCost;
@@ -36,10 +36,9 @@ void ticket :: discountPrice(double price) {
 }
 
 // prints ticket using data from derived classes
-void ticket :: printTicket(string showName, string showDate, string showTime, int numSeats, string fName, string sName, string address)
+void ticket :: printTicket(string showName, string showDate, string showTime, int numSeats, string fName, string sName, string address, double total)
 {
-    system("CLS");
-    cout << "\n~~~~~~~~~~~~~~~~~OUR TICKETS~~~~~~~~~~~~~~~~~\n" << endl;
+    cout << "\n~~~~~~~~~~~~~~~~~YOUR TICKETS~~~~~~~~~~~~~~~~~\n" << endl;
     cout << "======================" << endl;
     cout << "========================== The Bucks Centre for the Performing Arts========" << endl;
     cout << "===== Enjoy the show!========================" << endl;
@@ -51,9 +50,9 @@ void ticket :: printTicket(string showName, string showDate, string showTime, in
     cout << "======================" << endl;
 
     cout << "Number of seats: " << numSeats << endl;
-    cout << "Total cost: " << (char)156 << this -> cost() << endl;
+    cout << "Total cost: " << total << endl;
     cout << "Ticket Purchaser:" << fName << " " << sName << endl;
-    cout << "Postal address: " << address << endl;
+    cout << "Email address: " << address << endl;
 
     cout << "======================" << endl;
     cout << "======================\n\n" << endl;

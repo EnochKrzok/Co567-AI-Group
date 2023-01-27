@@ -4,19 +4,20 @@
 #include <string>
 //#include <Windows.h>
 
+using namespace std;
 
 class user {
 public:
     user();
     ~user();
-    char getLogin();
-    void getProfileInfo(string &fName, string &sName, string &address, string &consumer);
+    string getLogin();
+    void getProfileInfo(string &fName, string &sName, string &address);
     void getPaymentInfo();
 protected:
     string fName;
     string sName;
     string address;
-    char consumer;
+    string consumer;
 };
 
 // constructor
@@ -34,13 +35,13 @@ user :: ~user()
 }
 
 // user logs in
-char user :: getLogin()
+string user :: getLogin()
 {
     string username; // in the real system, a set of usernames/passwords would be saved in a database file
     string password; // in this prototype, any username/password will be accepted
     cout << "\n~~~~~~~~~~~~~~~~~ Log In ~~~~~~~~~~~~~~~~~\n" << endl;
     cout << "\n Welcome to the Bucks Centre for the Performing Arts ticket purchasing system!" << endl;
-    cout << "              Please log in." << endl;
+    cout << "Please log in." << endl;
     cout<<"Enter username: ";
     getline(cin, username);
     while (username.length() > 10){
@@ -60,9 +61,24 @@ char user :: getLogin()
 
     cout<<"Enter agent(a)/venue manager(b)/customer(c) : ";
     getline(cin, consumer);
-    return consumer
+    return consumer;
 }
 
 // customer/agent enters profile information
-void user :: getProfileInfo(string &fName, string &sName, string &address, string &consumer) {}
+void user :: getProfileInfo(string &fName, string &sName, string &address) {
+    cout << "\n~~~~~~~~~~~~~~~~~ PROFILE INFO ~~~~~~~~~~~~~~~~~\n" << endl;
+    cout << "\n Add info about you so we can blackmail you later" << endl;
+    cout<<"Enter First Name: ";
+    getline(cin, fName);
 
+    cout<<"Enter Surname Name: ";
+    getline(cin, sName);
+
+    cout<<"Enter email address: ";
+    getline(cin, address);
+}
+
+//get payment info so you can get scammed
+void user ::getPaymentInfo() {
+
+}

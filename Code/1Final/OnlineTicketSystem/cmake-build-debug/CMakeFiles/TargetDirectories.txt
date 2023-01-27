@@ -1,0 +1,3 @@
+C:/Users/ejink/Documents/GitHub/Co567-AI-Group/Code/1Final/OnlineTicketSystem/cmake-build-debug/CMakeFiles/OnlineTicketSystem.dir
+C:/Users/ejink/Documents/GitHub/Co567-AI-Group/Code/1Final/OnlineTicketSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ejink/Documents/GitHub/Co567-AI-Group/Code/1Final/OnlineTicketSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
