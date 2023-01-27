@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-//#include <Windows.h>
+
 
 using namespace std;
 
@@ -58,7 +58,7 @@ string user :: getLogin()
         getline(cin, password);
     }
 
-    cout<<"Enter agent(a)/venue manager(b)/customer(c) : ";
+    cout<<"Enter agent(a)/venue manager(v)/customer(c) : ";
     getline(cin, consumer);
     return consumer;
 }
