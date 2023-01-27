@@ -6,6 +6,7 @@
 #include "show.h"
 #include "user.h"
 #include "showSeat.h"
+#include "creditCardValidation.h"
 
 
 
@@ -30,6 +31,7 @@ int main () {
     user USER;
     show SHOW;
     ticket *TICK;
+    creditCardValidation VALI;
 
     string avc = USER.getLogin();
     int i = 1;
@@ -162,6 +164,8 @@ int main () {
                 SEAT.getRandomSeat(numSeats);
 
                 double total = SEAT.calculatePrice(price, numSeats);
+                cout << "you have to pay £" << total << endl;
+                VALI.is_valid_Run();
 
                 TICK->printTicket(showName, showDate, showTime, numSeats, f, g, h, total);
 
