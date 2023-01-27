@@ -12,7 +12,6 @@ public:
     ~user();
     string getLogin();
     void getProfileInfo(string &fName, string &sName, string &address);
-    void getPaymentInfo();
 protected:
     string fName;
     string sName;
@@ -76,9 +75,4 @@ void user :: getProfileInfo(string &fName, string &sName, string &address) {
 
     cout<<"Enter email address: ";
     getline(cin, address);
-}
-
-//get payment info so you can get scammed
-void user ::getPaymentInfo() {
-
 }
